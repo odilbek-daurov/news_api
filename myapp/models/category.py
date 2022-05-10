@@ -1,5 +1,4 @@
 from django.db import models
-from django.core.exceptions import ValidationError
 
 
 class Category(models.Model):
@@ -8,8 +7,3 @@ class Category(models.Model):
     
     def __str__(self) -> str:
         return self.name
-    
-
-    def validate_name(value):
-        if len(value) <= 2:
-            raise ValidationError('categoriya kamida 2 ta belgidan iborat bo`lishi kerek')

@@ -14,7 +14,7 @@ class News(models.Model):
     update = models.DateTimeField(auto_now=True)
     views = models.IntegerField(default=0)
     city = models.ForeignKey(City, on_delete=models.CASCADE, blank=True, null=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE,blank=True, null=True)
     
     def __str__(self) -> str:
         return self.title
